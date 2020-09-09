@@ -1,16 +1,15 @@
-require('dotenv').config()
-const withSass = require('@zeit/next-sass')
+require("dotenv").config();
+const withSass = require("@zeit/next-sass");
 
 module.exports = withSass({
   /* config options here */
-  webpack: config => {
+  webpack: (config) => {
     config.node = {
-      fs: 'empty'
-    }
-    return config
+      fs: "empty",
+    };
+    return config;
   },
   env: {
-    'CHEC_PUBLIC_KEY': process.env.CHEC_PUBLIC_KEY
-  }
-})
-
+    CHEC_PUBLIC_KEY: process.env.CHEC_PUBLIC_KEY,
+  },
+});
